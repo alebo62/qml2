@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Button.qml</file>
+        <file>RedSquare.qml</file>
+        <file>RepeaterExample.qml</file>
+        <file>DarkSquare.qml</file>
+        <file>Textinput.qml</file>
+        <file>TLineEditV1.qml</file>
+        <file>TLineEditV2.qml</file>
+        <file>TTextEdit.qml</file>
+        <file>AnimationExample.qml</file>
+        <file>assets/background.png</file>
+        <file>assets/box_green.png</file>
+        <file>ClickableImageV2.qml</file>
+        <file>assets/background_medium.png</file>
+        <file>assets/box_blue.png</file>
+        <file>assets/box_red.png</file>
+    </qresource>
+</RCC>
