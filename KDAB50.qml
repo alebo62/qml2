@@ -4,8 +4,9 @@ import Shapes 1.0
 
 Item {
     width: 300; height: 200
-    id: ellipse
+
     Ellipse {
+        id: ellipse
         anchors.fill: parent
         anchors.margins: 50
         color: "blue"
@@ -14,7 +15,7 @@ Item {
     Timer{
         interval: 2000
         running: true
-        onTriggered: ellipse.color = "red"
+        onTriggered: {ellipse.color = "red"}
     }
 
 }

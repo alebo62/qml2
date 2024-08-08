@@ -6,7 +6,7 @@
 class EllipseItem : public QQuickPaintedItem
 {
     Q_OBJECT
-    Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged FINAL)
+    Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged )
 public:
     EllipseItem(QQuickItem * parent = 0);
     void paint(QPainter* painter) override;
@@ -15,6 +15,11 @@ public:
 
      signals:
             void  colorChanged();
+
+     protected:
+            QColor& randomColor();
+         void mousePressEvent(QMouseEvent* me) override;
+         void wheelEvent(QWheelEvent* we) override;
 
 private:
     QColor m_color;
