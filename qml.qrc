@@ -16,5 +16,6 @@
         <file>assets/background_medium.png</file>
         <file>assets/box_blue.png</file>
         <file>assets/box_red.png</file>
+        <file>KDAB50.qml</file>
     </qresource>
 </RCC>
