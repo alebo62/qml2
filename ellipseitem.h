@@ -10,14 +10,14 @@ class EllipseItem : public QQuickPaintedItem
 public:
     EllipseItem(QQuickItem * parent = 0);
     void paint(QPainter* painter) override;
-    void setColor(QColor& newColor);
+    void setColor(QColor newColor);
     QColor color();
 
      signals:
             void  colorChanged();
 
      protected:
-            QColor& randomColor();
+
          void mousePressEvent(QMouseEvent* me) override;
          void wheelEvent(QWheelEvent* we) override;
 

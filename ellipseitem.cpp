@@ -1,6 +1,9 @@
 #include "ellipseitem.h"
 #include <QPainter>
 #include <QWheelEvent>
+#include <QtGlobal>
+
+static QColor randomColor();
 
 EllipseItem::EllipseItem(QQuickItem* parent):
     QQuickPaintedItem(parent)
@@ -23,7 +26,7 @@ void EllipseItem::paint(QPainter *painter)
     painter->restore();
 }
 
-void EllipseItem::setColor(QColor &newColor)
+void EllipseItem::setColor(QColor newColor)
 {
     if(m_color != newColor){
         m_color = newColor;
@@ -44,15 +47,15 @@ void EllipseItem::mousePressEvent(QMouseEvent* me)
 
 void EllipseItem::wheelEvent(QWheelEvent* we)
 {
-    if(we->angleDelta() > 0)
+    if(we->angleDelta().y() > 0)
         setColor(m_color.lighter(110));
     else
-        seColor(m_color.darker(110));
+        setColor(m_color.darker(110));
 }
 
-QColor& EllipseItem::randomColor()
+static QColor randomColor()
 {
-    return QColor(qrand() & 0xFF, qrand() & 0xFF, qrand() & 0xFF);
+    return QColor(rand() & 0xFF, rand() & 0xFF, rand() & 0xFF);
 }
 
 
